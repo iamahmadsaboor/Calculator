@@ -38,6 +38,14 @@ let eqFunc = () => {
     case "/":
       result = Number(firstNumber) / Number(secondNumber);
       break;
+    case "%":
+      let number = parseFloat(inputsec.value);
+      inputsec.value = number / 100;
+      return;
+    case "^":
+      result = Number(firstNumber) * Number(secondNumber);
+      break;
+
     default:
       result = "Error";
       break;
