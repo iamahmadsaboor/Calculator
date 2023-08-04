@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <style>
     /* Custom Tailwind CSS class definition */
     .custom-btn {
       padding: 12px 20px;
+      font-family: "Balthazar", serif;
       font-size: 1.25rem;
       font-weight: 600;
       border-radius: 10px;
@@ -35,35 +42,35 @@
       <div class="allbtns">
         <div class="flex justify-center text-center gap-4">
           <button class="btnClass custom-btn" onclick="clrInp()">C</button>
-          <button class="custom-btn" onclick="">/</button>
-          <button class="custom-btn" onclick="">*</button>
-          <button class="custom-btn" onclick="">D</button>
+          <button class="custom-btn" onclick="evaluation('/')">/</button>
+          <button class="custom-btn" onclick="evaluation('*')">*</button>
+          <button class="custom-btn" onclick="dFunc()">D</button>
         </div>
         <div class="flex justify-center text-center gap-4">
           <button class="custom-btn" onclick="writeToResult(7)">7</button>
           <button class="custom-btn" onclick="writeToResult(8)">8</button>
           <button class="custom-btn" onclick="writeToResult(9)">9</button>
-          <button class="custom-btn" onclick="">-</button>
+          <button class="custom-btn" onclick="evaluation('-')">-</button>
         </div>
         <div class="flex justify-center text-center gap-4">
           <button class="custom-btn" onclick="writeToResult(4)">4</button>
           <button class="custom-btn" onclick="writeToResult(5)">5</button>
           <button class="custom-btn" onclick="writeToResult(6)">6</button>
-          <button class="custom-btn" onclick="plsOpr('+')">+</button>
+          <button class="custom-btn" onclick="evaluation('+')">+</button>
         </div>
         <div class="flex justify-center text-center gap-4">
           <button class="custom-btn" onclick="writeToResult(1)">1</button>
           <button class="custom-btn" onclick="writeToResult(2)">2</button>
           <button class="custom-btn" onclick="writeToResult(3)">3</button>
-          <button class="custom-btn" onclick="">=</button>
+          <button class="custom-btn" onclick="eqFunc()">=</button>
         </div>
         <div class="flex justify-center text-center gap-4">
           <button class="custom-btn" onclick="">%</button>
           <button class="custom-btn" onclick="writeToResult(0)">0</button>
-          <button class="custom-btn" onclick="">.</button>
+          <button class="custom-btn" onclick="writeToResult('.')">.</button>
         </div>
       </div>
     </div>
-    <script src="/script.js"></script>
+    <script src="/Simple Calculator/script.js"></script>
   </body>
 </html>
